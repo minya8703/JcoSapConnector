@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+<!-- 30초마다 설정 파일의 변경을 확인 하여 변경시 갱신 -->
+    <property name="LOG_DIR" value="logs"></property>
+    <!-- 로그를 저장할 경로는 프로퍼티로 설정   -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <!-- ConsoleAppender 콘솔에 로그를 작성 -->
+        <encoder>
+            <pattern>%cyan(%d{yyyy-MM-dd HH:mm:ss.SSS}) [%highlight(%-5level)] %cyan(%logger{36}): %msg%n</pattern>
+        </encoder>
+    </appender>
+    <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <!-- RollingFileAppender 로그 파일을 롤오버하는 기능-->
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+        <!-- ThresholdFilter 지정된 레벨 미만의 이벤트를 필터링 INFO이상 출력-->
+            <level>INFO</level>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+        <!-- TimeBasedRollingPolicy 일별 또는 월별과 같이 시간을 기준으로 롤오버 정책을 정의-->
+            <!-- rollover daily -->
+            <fileNamePattern>${LOG_DIR}/log-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <!-- 로그 파일의 이름을 정의-->
+            <maxHistory>15</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <!-- SizeAndTimeBasedFNATP 로그 파일의 크기가 커지는 것을 방지하기 위한 옵션-->
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <pattern>[%-5level] %d{HH:mm:ss.SSS} %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 에러의 경우 파일에 로그 처리 -->
+    <appender name="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- RollingFileAppender 로그 파일을 롤오버하는 기능-->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <!-- ThresholdFilter 지정된 레벨 미만의 이벤트를 필터링 INFO이상 출력-->
+            <level>error</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- TimeBasedRollingPolicy 일별 또는 월별과 같이 시간을 기준으로 롤오버 정책을 정의-->
+            <!-- rollover daily -->
+            <fileNamePattern>${LOG_DIR}/log_err-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <maxHistory>15</maxHistory>
+            <!-- 로그 파일의 이름을 정의-->
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <!-- SizeAndTimeBasedFNATP 로그 파일의 크기가 커지는 것을 방지하기 위한 옵션-->
+                <!-- or whenever the file size reaches 100MB -->
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <pattern>[%-5level] %d{HH:mm:ss.SSS} %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+    <!--  appender STDOUT와 ROLLING을 debug레벨로 지정-->
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="ROLLING"/>
+        <appender-ref ref="ERROR"/>
+    </root>
+</configuration>

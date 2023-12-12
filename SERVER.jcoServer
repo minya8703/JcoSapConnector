@@ -1,0 +1,7 @@
+#for tests only !
+#Tue Dec 12 12:38:54 KST 2023
+jco.server.connection_count=2
+jco.server.gwserv=sapgw00
+jco.server.progid=PBILL_SED
+jco.server.repository_destination=ABAP_AS_WITHOUT_POOL
+jco.server.gwhost=111.111.111.111

@@ -1,0 +1,22 @@
+sap:
+  connect:
+    host: 111.111.111.111
+    sysnr: 00
+    client: 300
+    user: PBILLRFC
+    passwd: rfcpbill
+    lang: KO
+    
+# Server
+jco:
+  server:
+    connection_count: 2
+    progid: PBILL_SED
+    repository_destination: ABAP_AS_WITHOUT_POOL
+    gwserv: sapgw00
+    gwhost: 111.111.111.111
+  client:
+    function: ZFI_SALES_TAX_TO_NTS
+    
+    
+    

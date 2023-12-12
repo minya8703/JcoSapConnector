@@ -1,0 +1,72 @@
+[INFO ] 12:38:53.275 o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+[INFO ] 12:38:53.304 sap.JcoSapConnectorApplication - Starting JcoSapConnectorApplication using Java 17.0.8.1 with PID 8496 (C:\Users\2023A024\Documents\workspace-spring-tool-suite-4-4.20.0.RELEASE\JcoSapConnector\bin\main started by 2023A024 in C:\Users\2023A024\Documents\workspace-spring-tool-suite-4-4.20.0.RELEASE\JcoSapConnector)
+[INFO ] 12:38:53.305 sap.JcoSapConnectorApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 12:38:54.241 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+[INFO ] 12:38:54.249 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+[INFO ] 12:38:54.251 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 12:38:54.251 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+[INFO ] 12:38:54.310 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 12:38:54.310 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 966 ms
+[INFO ] 12:38:54.373 sap.config.SapRFCConnection - RFC Server Start
+[INFO ] 12:38:54.374 sap.config.JCoConnectionManager - RFC 접속 서버 기동
+[INFO ] 12:38:54.679 sap.config.JCoConnectionManager - The program can be stoped using <ctrl>+<c>
+[INFO ] 12:38:54.947 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+[WARN ] 12:38:54.954 o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+[INFO ] 12:38:54.968 o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+[ERROR] 12:38:54.982 o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+[INFO ] 12:39:48.208 o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+[INFO ] 12:39:48.263 sap.JcoSapConnectorApplication - Starting JcoSapConnectorApplication using Java 17.0.8.1 with PID 14292 (C:\Users\2023A024\Documents\workspace-spring-tool-suite-4-4.20.0.RELEASE\JcoSapConnector\bin\main started by 2023A024 in C:\Users\2023A024\Documents\workspace-spring-tool-suite-4-4.20.0.RELEASE\JcoSapConnector)
+[INFO ] 12:39:48.264 sap.JcoSapConnectorApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 12:39:49.230 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+[INFO ] 12:39:49.238 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO ] 12:39:49.240 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 12:39:49.240 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+[INFO ] 12:39:49.315 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 12:39:49.315 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 988 ms
+[INFO ] 12:39:49.373 sap.config.SapRFCConnection - RFC Server Start
+[INFO ] 12:39:49.373 sap.config.JCoConnectionManager - RFC 접속 서버 기동
+[INFO ] 12:39:49.638 sap.config.JCoConnectionManager - The program can be stoped using <ctrl>+<c>
+[INFO ] 12:39:49.905 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+[INFO ] 12:39:49.927 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path ''
+[INFO ] 12:39:49.934 sap.JcoSapConnectorApplication - Started JcoSapConnectorApplication in 2.173 seconds (process running for 3.657)
+[INFO ] 12:40:05.990 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 12:40:05.990 o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 12:40:05.991 o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+[INFO ] 12:40:06.005 s.c.PopbillWebhookController - popbillWebhook @RestController Start
+[INFO ] 12:40:06.005 sap.service.PopbillWebhookService - ==> PopbillWebhookService.getTaxInvoice Start
+[INFO ] 12:40:07.865 sap.utils.FileUtils - D:\Java\taxinvoicesData\20231212 폴더가 생성되었습니다.
+[INFO ] 12:40:07.874 sap.utils.FileUtils - D:\Java\taxinvoicesData\20231212\20231212124007.865_Body_COUNT_4.csv 파일 생성 성공
+[INFO ] 12:40:07.876 sap.utils.FileUtils - D:\Java\taxinvoicesData\20231212\20231212124007.875_Header_COUNT_1.csv 파일 생성 성공
+[INFO ] 12:40:08.398 sap.service.PopbillWebhookService - ==> PopbillWebhookService.getTaxInvoice Service END
+[INFO ] 12:56:39.364 o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+[INFO ] 12:56:39.367 o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8888"]
+[INFO ] 13:12:21.583 o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+[INFO ] 13:12:21.647 sap.JcoSapConnectorApplication - Starting JcoSapConnectorApplication using Java 17 with PID 13920 (C:\Users\2023A024\Documents\workspace-spring-tool-suite-4-4.20.0.RELEASE\JcoSapConnector\bin\main started by 2023A024 in C:\Users\2023A024\Documents\workspace-spring-tool-suite-4-4.20.0.RELEASE\JcoSapConnector)
+[INFO ] 13:12:21.650 sap.JcoSapConnectorApplication - No active profile set, falling back to 1 default profile: "default"
+[INFO ] 13:12:23.212 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8888 (http)
+[INFO ] 13:12:23.223 o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+[INFO ] 13:12:23.227 o.a.catalina.core.StandardService - Starting service [Tomcat]
+[INFO ] 13:12:23.228 o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+[INFO ] 13:12:23.345 o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 13:12:23.347 o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1639 ms
+[INFO ] 13:12:23.438 sap.config.SapRFCConnection - RFC Server Start
+[INFO ] 13:12:23.438 sap.config.JCoConnectionManager - RFC ���� ���� �⵿
+[INFO ] 13:12:23.865 sap.config.JCoConnectionManager - The program can be stoped using <ctrl>+<c>
+[INFO ] 13:12:24.281 o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+[INFO ] 13:12:24.319 o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8888 (http) with context path ''
+[INFO ] 13:12:24.333 sap.JcoSapConnectorApplication - Started JcoSapConnectorApplication in 3.313 seconds (process running for 4.915)
